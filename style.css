@@ -1,0 +1,174 @@
+*{
+    /* configs de tela e fonts gerais */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    /* criar uma rolagem de pg mais suave */
+    scroll-behavior: smooth;
+}
+
+/* 
+ CORES PARA TESTES
+
+ :root{
+    -primaria: #3A6EA5;     /* azul investigação 
+    -secundaria: #B11226;   /* vermelho Red John 
+    -escuro: #1F2933;       /* cinza escuro profissional 
+    -maisEscuro: #111827;   /* fundo profundo 
+    -claro: #F5F5F5;        /* branco suave 
+    -vidro: rgba(58, 110, 165, 0.08);
+}
+
+:root{
+    -primaria: #5FA777;     /* verde dos títulos 
+    -secundaria: #D8A62A;   /* amarelo / pistas 
+    -escuro: #2B2B2B;       /* texto principal 
+    -maisEscuro: #1A1A1A;   /* quase preto 
+    -claro: #F3F4F6;        /* fundo claro 
+    -vidro: rgba(95, 167, 119, 0.08);
+}
+
+:root{
+    -primaria: #B11226;     /* vermelho principal 
+    -secundaria: #3A6EA5;   /* azul contraste 
+    -escuro: #1C1C1C;       /* cinza profundo 
+    -maisEscuro: #0F0F0F;   /* quase preto 
+    -claro: #F5F5F5;        /* fundo 
+    -vidro: rgba(177, 18, 38, 0.08);
+}
+*/
+
+/* vaiáveis para cores padronizadas */
+:root{
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+
+
+body{
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.navegacao{
+    /* barra de navegação */
+    position: fixed;
+    top: 0;
+    background: rgb(15,23,42, 0.8);
+    width: 100%;
+    z-index:100;
+    padding: 1.5rem
+} 
+
+.menu{
+    /* configs do menu */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu_link{
+    /* configs dos lins do menu */
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* pseudo-elemmento after para animação simples*/
+.menu_link::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.3s ease;
+}
+
+.menu_link:hover::after{
+    width: 100%;
+    transition: 0.3s;
+}
+
+
+.cabecalho{
+    /* configs do cabeçalho */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto_perfil{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    box-shadow: 0 0 14px;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin: 14px 0;
+}
+
+.cabecalho_subtitulo{
+    font-size: 1.5rem;
+    color: var(--claro);
+    font-style: italic;
+
+}
+
+.sobre{ 
+    padding: 6rem 2rem;
+}
+
+.titulo_sobre{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.caixa_sobre{
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    /* cria um efeito esfumaçado */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.descricao_sobre{
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.projetos{
+    padding: 6rem 2rem;
+}
+
+/* .img-projetos{
+
+}
+
+caixa_projetos{
+
+} */
+
+

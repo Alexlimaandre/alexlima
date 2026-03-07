@@ -134,7 +134,8 @@ h1{
 
 }
 
-.sobre{ 
+/* Sobre Mim */
+.sobre_proj_ctt{ 
     padding: 6rem 2rem;
 }
 
@@ -159,16 +160,109 @@ h1{
     font-size: 1rem;
 }
 
-.projetos{
-    padding: 6rem 2rem;
+/* Projetos */
+.img_projetos{
+    height: 200px;
+    width: 100%;
+    /* aplica uma padrão na imagem para cobrir o espaço disponível */
+    object-fit: cover;
 }
 
-/* .img-projetos{
+.caixa_projetos{
+    display: grid;
+    /* cria uma grade de colunas que se ajusta automaticamente, com espaçamento igual*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+}
+.card_projeto{
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
 
 }
 
-caixa_projetos{
+.card_projeto:hover{
+    box-shadow: 0 10px 20px var(--primaria);
+    transform: translateY(-10px);
+}
+/* Meus projetos */
+.titulo_projetos{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
 
-} */
+/* Projetos separados */
+.titulo_projeto{
+    color: rgba(226,232,240,0.8);
+    line-height: 1.25rem;
+}
 
+.caixa_texto_projeto{
+    padding: 1.2rem;
+}
 
+.descricao_projeto{
+    margin-bottom:8px ;
+}
+
+/* Contato */
+
+.titulo_contato{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.formulario{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+}
+
+.grupo_form{
+    margin-bottom: 1.5rem;
+}
+
+.campo_form{
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--vidro);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--claro);
+    outline: none;
+}
+
+/* ao entrar em foco cria algo, nesse caso as cores definidas aparecem*/
+.campo_form:focus{
+    border-color: var(--secundaria);
+    box-shadow: 0 0 15px var(--primaria);
+}
+
+.btn_form{
+    color: var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3 ease;
+}
+
+.btn_form:hover{
+    transform: translateY(-4px);
+    background: linear-gradient(185deg, var(--secundaria), var(--primaria));
+    box-shadow: 0 5px 15px rgba(79, 70, 299, 0.4);
+}

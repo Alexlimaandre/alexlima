@@ -28,7 +28,7 @@
     </main>
 
     <!-- Sobre Mim -->
-    <section id="sobre" class="sobre">
+    <section id="sobre" class="sobre_proj_ctt">
         <h2 class="titulo_sobre">Sobre Mim</h2>
         <div class="caixa_sobre">
             <p class="descricao_sobre">
@@ -38,44 +38,51 @@
     </section>
 
     <!-- Projetos -->
-    <section id="projetos" class="projetos">
-        <h2 class="titulo_projetos">Projetos</h2>
-
+    <section id="projetos" class="sobre_proj_ctt">
+        <h2 class="titulo_projetos">Meus Projetos</h2>
         <div class="caixa_projetos">
+
             <div class="card_projeto">
                 <img src="images/dash_prof_dados.png" alt="Projeto X" class="img_projetos">
-                <h3 class="titulo_projeto">Projeto X</h3>
-                <p class="descricao_projeto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum itaque laudantium dignissimos hic quo culpa nostrum, iusto minima modi quidem sequi nulla voluptatem facere accusamus rem? Vitae explicabo ratione consequatur!</p>
+                <div class="caixa_texto_projeto">
+                    <h3 class="titulo_projeto">Projeto X</h3>
+                    <p class="descricao_projeto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum itaque laudantium dignissimos hic quo culpa nostrum, iusto minima modi quidem sequi nulla voluptatem facere accusamus rem? Vitae explicabo ratione consequatur!</p>
+                </div>
             </div>
-        </div>
 
-        <div class="caixa_projetos">
             <div class="card_projeto">
                 <img src="images/analise_dados.jpg" alt="Projeto Y" class="img_projetos">
-                <h3 class="titulo_projeto">Projeto Y</h3>
-                <p class="descricao_projeto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum itaque laudantium dignissimos hic quo culpa nostrum, iusto minima modi quidem sequi nulla voluptatem facere accusamus rem? Vitae explicabo ratione consequatur!</p>
+                <div class="caixa_texto_projeto">
+                    <h3 class="titulo_projeto">Projeto Y</h3>
+                    <p class="descricao_projeto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum itaque laudantium dignissimos hic quo culpa nostrum, iusto minima modi quidem sequi nulla voluptatem facere accusamus rem? Vitae explicabo ratione consequatur!</p>
+                </div>
             </div>
-        </div>
 
-        <div class="caixa_projetos">
             <div class="card_projeto">
                 <img src="images/dash_vendas.png" alt="Projeto Z" class="img_projetos">
-                <h3 class="titulo_projeto">Projeto Z</h3>
-                <p class="descricao_projeto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum itaque laudantium dignissimos hic quo culpa nostrum, iusto minima modi quidem sequi nulla voluptatem facere accusamus rem? Vitae explicabo ratione consequatur!</p>
+                <div class="caixa_texto_projeto">
+                    <h3 class="titulo_projeto">Projeto Z</h3>
+                    <p class="descricao_projeto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum itaque laudantium dignissimos hic quo culpa nostrum, iusto minima modi quidem sequi nulla voluptatem facere accusamus rem? Vitae explicabo ratione consequatur!</p>
+                </div>
             </div>
-        </div>
 
+        </div>
+    </section>
+    
         <!-- Contato -->
-        <section id="contato" class="contato">
-            <h2 class="titulo_contato">Contato</h2>
+        <section id="contato" class="sobre_proj_ctt">
+            <h2 class="titulo_contato">Entre em Contato</h2>
+
             <form class="formulario" id="formulario">
-                <div class="nome_form">
+                <div class="grupo_form">
                     <input type="text" placeholder="Nome" class="campo_form">
                 </div>
                 <div class="grupo_form">
-                    <textarea placeholder="Digite sua mensagem" class="text_form"></textarea>
+                    <textarea placeholder="Digite sua mensagem" class="campo_form"></textarea>
                 </div>
-            
+                
+                <button type="submit" class="btn_form">Enviar Mensagem</button>
             </form>
+        </section>
 </body>
 </html>

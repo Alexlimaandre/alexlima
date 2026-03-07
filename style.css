@@ -114,10 +114,12 @@ body{
 }
 
 .foto_perfil{
-    width: 350px;
-    height: 350px;
+    width: 325px;
+    height: 325px;
     border-radius: 50%;
     box-shadow: 0 0 14px;
+    /* animação de flutação no imagem infinita */
+    animation: floating 3s ease-in-out infinite;
 }
 
 h1{
@@ -174,6 +176,7 @@ h1{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1200px;
+    margin: 0 auto;
 }
 .card_projeto{
     background: rgba(255, 255, 255, 0.05);
@@ -265,4 +268,32 @@ h1{
     transform: translateY(-4px);
     background: linear-gradient(185deg, var(--secundaria), var(--primaria));
     box-shadow: 0 5px 15px rgba(79, 70, 299, 0.4);
+}
+
+/* Bolinhas de fundo no background */
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+
+    background: 
+     radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%), 
+     radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+     var(--escuro);
+}
+
+
+/* Animação de flutuação */
+@keyframes floating {
+    /* começo e fim da animação sem movimento, valor 0/inicial */
+    0%, 100%{
+        transform: translateY(0)
+    }
+    50%{
+        transform: translateY(-20px)
+    }
 }

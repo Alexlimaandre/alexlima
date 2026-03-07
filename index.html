@@ -7,6 +7,9 @@
     <title>Meu Portifolio</title>
 </head>
 <body>
+    <!-- Partículas de Fundo para design -->
+    <div class="particulas"></div>
+
     <!-- Barra de Navegação -->
     <nav class="navegacao">
             <ul class="menu">
@@ -73,16 +76,41 @@
         <section id="contato" class="sobre_proj_ctt">
             <h2 class="titulo_contato">Entre em Contato</h2>
 
-            <form class="formulario" id="formulario">
+            <form class="formulario" id="formulario" onsubmit="enviarWhats(event)">
+
                 <div class="grupo_form">
-                    <input type="text" placeholder="Nome" class="campo_form">
+                    <input type="text" placeholder="Nome" class="campo_form" id="nome">
                 </div>
+
                 <div class="grupo_form">
-                    <textarea placeholder="Digite sua mensagem" class="campo_form"></textarea>
+                    <textarea placeholder="Digite sua mensagem" class="campo_form" id="mensagem" rows="5"></textarea>
                 </div>
                 
                 <button type="submit" class="btn_form">Enviar Mensagem</button>
+
             </form>
         </section>
+
+
+        <script>
+
+            function enviarWhats(event){
+                event.preventDefault(); // Evita o envio do formulário
+
+                const nome = document.getElementById('nome').value;
+                const mensagem = document.getElementById('mensagem').value;
+                const telefone = '5511945393697';
+
+                const texto = `Olá meu chamo ${nome}, ${mensagem}`;
+                // formata a mensagem para ser enviada via URL
+                const msgFormatada = encodeURIComponent(texto);
+                // cria a URL do WhatsApp com o número de telefone e a mensagem formatada
+                const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`;
+                // const url = `https://wa.me/${telefone}/?t=${msgFormatada}`;
+                // abre a URL em uma nova aba do navegador
+                window.open(url, '_blank')
+            }
+
+        </script>
 </body>
 </html>

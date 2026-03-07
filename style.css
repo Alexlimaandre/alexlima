@@ -1,4 +1,4 @@
-*{
+* {
     /* configs de tela e fonts gerais */
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html{
+html {
     /* criar uma rolagem de pg mais suave */
     scroll-behavior: smooth;
 }
@@ -43,7 +43,7 @@ html{
 */
 
 /* vaiáveis para cores padronizadas */
-:root{
+:root {
     --primaria: #4f46e5;
     --secundaria: #7c3aed;
     --escuro: #0f172a;
@@ -54,22 +54,22 @@ html{
 
 
 
-body{
+body {
     background-color: var(--escuro);
     color: var(--claro);
 }
 
-.navegacao{
+.navegacao {
     /* barra de navegação */
     position: fixed;
     top: 0;
-    background: rgb(15,23,42, 0.8);
+    background: rgb(15, 23, 42, 0.8);
     width: 100%;
-    z-index:100;
+    z-index: 100;
     padding: 1.5rem
-} 
+}
 
-.menu{
+.menu {
     /* configs do menu */
     display: flex;
     justify-content: center;
@@ -77,7 +77,7 @@ body{
     list-style: none;
 }
 
-.menu_link{
+.menu_link {
     /* configs dos lins do menu */
     text-decoration: none;
     color: var(--claro);
@@ -87,7 +87,7 @@ body{
 }
 
 /* pseudo-elemmento after para animação simples*/
-.menu_link::after{
+.menu_link::after {
     content: '';
     height: 2px;
     width: 0%;
@@ -98,13 +98,13 @@ body{
     transition: width 0.3s ease;
 }
 
-.menu_link:hover::after{
+.menu_link:hover::after {
     width: 100%;
     transition: 0.3s;
 }
 
 
-.cabecalho{
+.cabecalho {
     /* configs do cabeçalho */
     min-height: 100vh;
     display: flex;
@@ -113,7 +113,7 @@ body{
     flex-direction: column;
 }
 
-.foto_perfil{
+.foto_perfil {
     width: 325px;
     height: 325px;
     border-radius: 50%;
@@ -122,14 +122,14 @@ body{
     animation: floating 3s ease-in-out infinite;
 }
 
-h1{
+h1 {
     font-size: 2.5rem;
     color: var(--primaria);
     font-weight: bold;
     margin: 14px 0;
 }
 
-.cabecalho_subtitulo{
+.cabecalho_subtitulo {
     font-size: 1.5rem;
     color: var(--claro);
     font-style: italic;
@@ -137,16 +137,16 @@ h1{
 }
 
 /* Sobre Mim */
-.sobre_proj_ctt{ 
+.sobre_proj_ctt {
     padding: 6rem 2rem;
 }
 
-.titulo_sobre{
+.titulo_sobre {
     font-size: 3rem;
     text-align: center;
 }
 
-.caixa_sobre{
+.caixa_sobre {
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
@@ -157,20 +157,20 @@ h1{
     backdrop-filter: blur(10px);
 }
 
-.descricao_sobre{
+.descricao_sobre {
     text-align: justify;
     font-size: 1rem;
 }
 
 /* Projetos */
-.img_projetos{
+.img_projetos {
     height: 200px;
     width: 100%;
     /* aplica uma padrão na imagem para cobrir o espaço disponível */
     object-fit: cover;
 }
 
-.caixa_projetos{
+.caixa_projetos {
     display: grid;
     /* cria uma grade de colunas que se ajusta automaticamente, com espaçamento igual*/
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -178,7 +178,8 @@ h1{
     max-width: 1200px;
     margin: 0 auto;
 }
-.card_projeto{
+
+.card_projeto {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--vidro);
     border-radius: 16px;
@@ -189,40 +190,41 @@ h1{
 
 }
 
-.card_projeto:hover{
+.card_projeto:hover {
     box-shadow: 0 10px 20px var(--primaria);
     transform: translateY(-10px);
 }
+
 /* Meus projetos */
-.titulo_projetos{
+.titulo_projetos {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
 
 /* Projetos separados */
-.titulo_projeto{
-    color: rgba(226,232,240,0.8);
+.titulo_projeto {
+    color: rgba(226, 232, 240, 0.8);
     line-height: 1.25rem;
 }
 
-.caixa_texto_projeto{
+.caixa_texto_projeto {
     padding: 1.2rem;
 }
 
-.descricao_projeto{
-    margin-bottom:8px ;
+.descricao_projeto {
+    margin-bottom: 8px;
 }
 
 /* Contato */
 
-.titulo_contato{
+.titulo_contato {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
 
-.formulario{
+.formulario {
     max-width: 600px;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.05);
@@ -232,11 +234,11 @@ h1{
     border-radius: 16px;
 }
 
-.grupo_form{
+.grupo_form {
     margin-bottom: 1.5rem;
 }
 
-.campo_form{
+.campo_form {
     width: 100%;
     padding: 1rem;
     border: 1px solid var(--vidro);
@@ -247,12 +249,12 @@ h1{
 }
 
 /* ao entrar em foco cria algo, nesse caso as cores definidas aparecem*/
-.campo_form:focus{
+.campo_form:focus {
     border-color: var(--secundaria);
     box-shadow: 0 0 15px var(--primaria);
 }
 
-.btn_form{
+.btn_form {
     color: var(--claro);
     background: linear-gradient(45deg, var(--primaria), var(--secundaria));
     padding: 1rem 2rem;
@@ -264,14 +266,14 @@ h1{
     transition: 0.3 ease;
 }
 
-.btn_form:hover{
+.btn_form:hover {
     transform: translateY(-4px);
     background: linear-gradient(185deg, var(--secundaria), var(--primaria));
     box-shadow: 0 5px 15px rgba(79, 70, 299, 0.4);
 }
 
 /* Bolinhas de fundo no background */
-.particulas{
+.particulas {
     position: fixed;
     top: 0;
     left: 0;
@@ -280,20 +282,127 @@ h1{
     z-index: -1;
     opacity: 0.3;
 
-    background: 
-     radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%), 
-     radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
-     var(--escuro);
+    background:
+        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+        var(--escuro);
 }
 
 
 /* Animação de flutuação */
 @keyframes floating {
-    /* começo e fim da animação sem movimento, valor 0/inicial */
-    0%, 100%{
+
+/* começo e fim da animação sem movimento, valor 0/inicial */
+    0%,
+    100% {
         transform: translateY(0)
     }
-    50%{
+
+    50% {
         transform: translateY(-20px)
     }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+
+.foto_perfil {
+    width: 260px;
+    height: 260px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .titulo_sobre {
+        font-size: 2.4rem;
+    }
+
+    .titulo_projetos {
+        font-size: 2.2rem;
+    }
+
+    .titulo_contato {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* Celulares */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+
+    .navegacao {
+        padding: 1rem;
+    }
+
+    .foto_perfil {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .cabecalho_subtitulo {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .sobre_proj_ctt {
+        padding: 4rem 1.5rem;
+    }
+
+    .caixa_sobre {
+        padding: 1.5rem;
+    }
+
+    .caixa_projetos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+    .foto_perfil {
+        width: 160px;
+        height: 160px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .cabecalho_subtitulo {
+        font-size: 1rem;
+    }
+
+    .titulo_sobre {
+        font-size: 2rem;
+    }
+
+    .titulo_projetos {
+        font-size: 2rem;
+    }
+
+    .titulo_contato {
+        font-size: 2rem;
+    }
+
+    .formulario {
+        padding: 1.5rem;
+    }
+
 }

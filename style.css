@@ -15,30 +15,31 @@ html {
  CORES PARA TESTES
 
  :root{
-    -primaria: #3A6EA5;     /* azul investigação 
-    -secundaria: #B11226;   /* vermelho Red John 
-    -escuro: #1F2933;       /* cinza escuro profissional 
-    -maisEscuro: #111827;   /* fundo profundo 
-    -claro: #F5F5F5;        /* branco suave 
-    -vidro: rgba(58, 110, 165, 0.08);
+    --primaria: #3A6EA5;     
+    --secundaria: #B11226;  
+    --escuro: #1F2933;      
+    --maisEscuro: #111827;   
+    --claro: #F5F5F5;      
+    --vidro: rgba(58, 110, 165, 0.08);
+}
+
+
+:root{
+    --primaria: #5FA777;   
+    --secundaria: #D8A62A;    
+    --escuro: #2B2B2B;      
+    --maisEscuro: #1A1A1A;   
+    --claro: #F3F4F6;       
+    --vidro: rgba(95, 167, 119, 0.08);
 }
 
 :root{
-    -primaria: #5FA777;     /* verde dos títulos 
-    -secundaria: #D8A62A;   /* amarelo / pistas 
-    -escuro: #2B2B2B;       /* texto principal 
-    -maisEscuro: #1A1A1A;   /* quase preto 
-    -claro: #F3F4F6;        /* fundo claro 
-    -vidro: rgba(95, 167, 119, 0.08);
-}
-
-:root{
-    -primaria: #B11226;     /* vermelho principal 
-    -secundaria: #3A6EA5;   /* azul contraste 
-    -escuro: #1C1C1C;       /* cinza profundo 
-    -maisEscuro: #0F0F0F;   /* quase preto 
-    -claro: #F5F5F5;        /* fundo 
-    -vidro: rgba(177, 18, 38, 0.08);
+    --primaria: #B11226;    
+    --secundaria: #3A6EA5; 
+    --escuro: #1C1C1C;      
+    --maisEscuro: #0F0F0F;   
+    --claro: #F5F5F5;        
+    --vidro: rgba(177, 18, 38, 0.08);
 }
 */
 
@@ -51,7 +52,6 @@ html {
     --claro: #e2e8f0;
     --vidro: rgba(255, 255, 255, 0.1);
 }
-
 
 
 body {
@@ -158,8 +158,9 @@ h1 {
 }
 
 .descricao_sobre {
-    text-align: justify;
+    text-align: center;
     font-size: 1rem;
+    margin:2px 0;
 }
 
 /* Projetos */

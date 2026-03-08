@@ -167,6 +167,7 @@ h1 {
 .img_projetos {
     height: 200px;
     width: 100%;
+    aspect-ratio: 16 / 9; 
     /* aplica uma padrão na imagem para cobrir o espaço disponível */
     object-fit: cover;
 }
@@ -217,6 +218,10 @@ h1 {
     margin-bottom: 8px;
 }
 
+.caminho_projetos {
+    text-decoration: none;
+    color: var(--claro);
+}
 /* Contato */
 
 .titulo_contato {

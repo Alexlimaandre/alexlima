@@ -3,123 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alexandre Lima André · Analista de Dados em formação · Big Data na FATEC · Python, SQL, Excel e Power BI.">
+    <title>Alexandre Lima · Dados</title>
     <link rel="icon" href="images/img_favicon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Meu Portifólio</title>
 </head>
 <body>
-    <!-- Partículas de Fundo para design -->
-    <div class="particulas"></div>
 
-    <!-- Barra de Navegação -->
-    <nav class="navegacao">
-            <ul class="menu">
-                <li>
-                    <a href="#inicio" class="menu_link">Início</a></li>
-                <li>
-                    <a href="#sobre" class="menu_link">Sobre</a></li>
-                <li>
-                    <a href="#projetos" class="menu_link">Projetos</a></li>
-                <li>
-                    <a href="#contato" class="menu_link">Contato</a></li>
-            </ul>
-    </nav>
-    <!-- Conteúdo Principal -->
-    <main id="inicio" class="cabecalho">
-            <img src="images/minha_imagem.png" alt="Alexandre Lima André" class="foto_perfil">
-            <h1>Alexandre Lima André</h1>
-            <p class="cabecalho_subtitulo">Data Scientist em Formação</p>
-    </main>
+    <!-- Barra do topo -->
+    <header class="topo">
+        <a href="#inicio" class="topo_nome">Alexandre Lima</a>
+        <span class="topo_cargo">Analista de Dados em formação</span>
+        <span class="topo_local">São Paulo <span class="ponto_sep">•</span> <span id="hora">--:--</span></span>
+        <span class="topo_status" title="Disponível para estágio"><span class="bolinha"></span><span class="topo_status_txt">Disponível para estágio</span></span>
+    </header>
 
-    <!-- Sobre Mim -->
-    <section id="sobre" class="sobre_proj_ctt">
-        <h2 class="titulo_sobre">Sobre Mim</h2>
-        <div class="caixa_sobre">
-            <p class="descricao_sobre">
-            Sou estudante de Big Data para Negócios pela FATEC Ipiranga e técnico formado em Desenvolvimento de Sistemas pela ETEC Juscelino Kubitschek de Oliveira.
-            </p>
-            <p class="descricao_sobre">
-            Minha formação combina desenvolvimento de software e análise de dados, com experiência em projetos de modelagem de banco de dados, criação de dashboards e desenvolvimento de sistemas.
-            </p>
-            <p class="descricao_sobre">
-            Tenho perfil analítico, organizado e facilidade para aprender novas tecnologias. Busco oportunidade de estágio para aplicar e expandir meus conhecimentos na área de dados e desenvolvimento.
-            </p>
-        </div>
-    </section>
+    <!-- Início: nome grande + bento grid (inspirado no Crysta) -->
+    <main id="inicio">
+        <section class="hero">
+            <h1 class="nome_grande" id="nomeGrande" aria-live="polite">Alexandre Lima</h1>
 
-    <!-- Projetos -->
-    <section id="projetos" class="sobre_proj_ctt">
-        <h2 class="titulo_projetos">Meus Projetos</h2>
-        <div class="caixa_projetos">
+            <div class="bento">
+                <a href="#sobre" class="card card_sobre" data-label="Sobre">
+                    <span class="card_mini">Big Data · FATEC</span>
+                    <span class="card_rotulo">Sobre <span class="seta">↗</span></span>
+                </a>
 
-            <div class="card_projeto">
-                <img src="images/img-site-mkease.PNG" alt="MarketEase" class="img_projetos">
-                <div class="caixa_texto_projeto">
-                    <h3 class="titulo_projeto">MarketEase</h3>
-                    <p class="descricao_projeto">Aplicativo mobile desenvolvido com React Native que permite a criação de listas de compras personalizadas e o acompanhamento dos gastos do usuário. A aplicação inclui gráficos de análise financeira, possibilitando visualizar o retorno e a evolução dos gastos ao longo do tempo, auxiliando na organização do orçamento pessoal.</p>
-                </div>
-            </div>
-
-            <div class="card_projeto">
-                <img src="images/rastreador.png" alt="Sistema de Rastreamento de Produtos" class="img_projetos">
-                <div class="caixa_texto_projeto">
-                    <h3 class="titulo_projeto">Sistema de Rastreamento de Produtos</h3>
-                    <p class="descricao_projeto">Sistema desenvolvido para rastrear produtos e registrar o histórico de movimentações entre diferentes localizações. Permite cadastrar funcionários, clientes, produtos e locais, além de consultar a posição atual e o histórico completo de cada item. O sistema é executado via terminal e pode ser aplicado em comércio, logística e varejo para melhorar o controle e a rastreabilidade de produtos.</p>
-                </div>
-            </div>
-
-            <div class="card_projeto">
-                <a href="https://imersao-dados-com-python-alura-2026.streamlit.app/" target="_blank" class="caminho_projetos">
-                    <img src="images/dados_profi.png" alt="Dashboard" class="img_projetos">
-                    <div class="caixa_texto_projeto">
-                        <h3 class="titulo_projeto">Dashboard Sobre Profissionais de Dados</h3>
-                        <p class="descricao_projeto">Dashboard desenvolvido em Python durante a Imersão de Dados da Alura, com o objetivo de analisar e visualizar informações sobre profissionais da área de dados. O projeto utiliza visualizações interativas para explorar dados do mercado, facilitando a interpretação de informações e tendências da área.</p>
+                <a href="#projetos" class="card card_projetos" data-label="Projetos">
+                    <div class="miniaturas" aria-hidden="true">
+                        <div class="mini_olist mini_kpi"><span>Salários</span><b>$157k</b><b>133 mil</b></div>
+                        <div class="mini_olist"><span>SQL</span><div class="mini_hbar"><i style="--w:90%"></i><i style="--w:70%"></i><i style="--w:45%"></i><i style="--w:25%"></i></div></div>
+                        <div class="mini_olist">
+                            <span>Olist</span>
+                            <div class="barrinhas"><i style="--h:85%"></i><i style="--h:78%"></i><i style="--h:40%"></i><i style="--h:62%"></i><i style="--h:90%"></i></div>
+                        </div>
                     </div>
+                    <span class="card_rotulo">Projetos <span class="seta">↗</span></span>
+                </a>
+
+                <a href="#contato" class="card card_contato" data-label="Contato">
+                    <span class="card_mini">LinkedIn · GitHub</span>
+                    <span class="card_rotulo">Contato <span class="seta">↗</span></span>
+                </a>
+
+                <div class="card card_foto" data-label="Oi! 👋">
+                    <img src="images/minha_imagem.png" alt="Foto de Alexandre Lima André">
+                </div>
+
+                <div class="card card_stack" data-label="Stack">
+                    <div class="faixa" aria-label="Ferramentas: Python, Pandas, SQL, Excel, Power BI, Git, Jupyter, Streamlit">
+                        <div class="faixa_trilho">
+                            <span>Python</span><span>Pandas</span><span>SQL</span><span>Excel</span><span>Power BI</span><span>Git</span><span>Jupyter</span><span>Streamlit</span>
+                            <span aria-hidden="true">Python</span><span aria-hidden="true">Pandas</span><span aria-hidden="true">SQL</span><span aria-hidden="true">Excel</span><span aria-hidden="true">Power BI</span><span aria-hidden="true">Git</span><span aria-hidden="true">Jupyter</span><span aria-hidden="true">Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://www.linkedin.com/in/alexandrelimaandre/" target="_blank" rel="noopener" class="card card_curriculo" data-label="Currículo">
+                    <span class="card_rotulo">Currículo <span class="seta">↗</span></span>
                 </a>
             </div>
-
-        </div>
-    </section>
-    
-        <!-- Contato -->
-        <section id="contato" class="sobre_proj_ctt">
-            <h2 class="titulo_contato">Entre em Contato</h2>
-
-            <form class="formulario" id="formulario" onsubmit="enviarWhats(event)">
-
-                <div class="grupo_form">
-                    <input type="text" placeholder="Nome" class="campo_form" id="nome">
-                </div>
-
-                <div class="grupo_form">
-                    <textarea placeholder="Digite sua mensagem" class="campo_form" id="mensagem" rows="5"></textarea>
-                </div>
-                
-                <button type="submit" class="btn_form">Enviar Mensagem</button>
-
-            </form>
         </section>
 
+        <!-- Sobre -->
+        <section id="sobre" class="secao">
+            <p class="secao_tag">Sobre</p>
+            <div class="sobre_grid">
+                <h2 class="sobre_frase">Transformo dados em respostas para perguntas de negócio.</h2>
+                <div class="sobre_texto">
+                    <p>Sou estudante de <strong>Big Data para Negócios na FATEC Ipiranga</strong> e técnico em Desenvolvimento de Sistemas pela ETEC Juscelino Kubitschek de Oliveira.</p>
+                    <p>Venho do desenvolvimento de software e hoje meu foco é <strong>análise de dados</strong>: limpar, cruzar e resumir dados reais em Excel, SQL, Power BI e Python, sempre partindo de uma pergunta de negócio.</p>
+                    <p>Busco um <strong>estágio em dados</strong> para aplicar isso em problemas reais e continuar aprendendo rápido.</p>
+                </div>
+            </div>
+            <ul class="fatos">
+                <li><span class="fato_num">FATEC</span><span class="fato_txt">Big Data para Negócios</span></li>
+                <li><span class="fato_num">ETEC</span><span class="fato_txt">Técnico em Desenv. de Sistemas</span></li>
+                <li><span class="fato_num">100 mil</span><span class="fato_txt">pedidos reais no Projeto Olist</span></li>
+            </ul>
+        </section>
 
-        <script>
+        <!-- Projetos de dados -->
+        <section id="projetos" class="secao">
+            <p class="secao_tag">Projetos de dados</p>
+            <h2 class="secao_titulo">Projetos que mostram como eu trabalho com dados</h2>
 
-            function enviarWhats(event){
-                event.preventDefault(); // Evita o envio do formulário
+            <div class="projetos_grid">
 
-                const nome = document.getElementById('nome').value;
-                const mensagem = document.getElementById('mensagem').value;
-                const telefone = '5511945393697';
+                <!-- Destaque: Olist -->
+                <article class="projeto projeto_destaque">
+                    <div class="projeto_visual visual_olist">
+                        <span class="status andamento">Em andamento</span>
+                        <div class="olist_pergunta" aria-hidden="true">O atraso na entrega derruba a nota?</div>
+                        <div class="olist_barras">
+                            <div><i style="--h:82%"></i><span>no prazo</span></div>
+                            <div><i style="--h:44%"></i><span>atrasado</span></div>
+                        </div>
+                        <span class="olist_obs">ilustração</span>
+                    </div>
+                    <div class="projeto_corpo">
+                        <div class="projeto_cabeca">
+                            <h3>Projeto Olist: por que clientes dão nota ruim?</h3>
+                            <span class="categoria">Análise · projeto principal</span>
+                        </div>
+                        <p class="projeto_desc">Análise de ~100 mil pedidos reais do e-commerce brasileiro Olist. A pergunta: <strong>o que leva um cliente a dar nota ruim, e o que a empresa pode fazer para evitar isso?</strong> O projeto passa por quatro etapas: entender os dados, provar o que pesa na nota, prever avaliações ruins e comunicar o resultado.</p>
+                        <ul class="tags"><li>Python</li><li>Pandas</li><li>SQL</li><li>Excel</li><li>Power BI</li></ul>
+                        <div class="links">
+                            <a href="https://github.com/Alexlimaandre/olist-data-science" target="_blank" rel="noopener" class="botao">Ver no GitHub ↗</a>
+                        </div>
+                    </div>
+                </article>
 
-                const texto = `Olá meu chamo ${nome}, ${mensagem}`;
-                // formata a mensagem para ser enviada via URL
-                const msgFormatada = encodeURIComponent(texto);
-                // cria a URL do WhatsApp com o número de telefone e a mensagem formatada
-                const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`;
-                // const url = `https://wa.me/${telefone}/?t=${msgFormatada}`;
-                // abre a URL em uma nova aba do navegador
-                window.open(url, '_blank')
-            }
+                <article class="projeto">
+                    <div class="projeto_visual visual_salarios">
+                        <span class="status">Concluído</span>
+                        <div class="sal_painel" aria-hidden="true">
+                            <div class="sal_kpis">
+                                <div><small>salário médio</small><b>$157.619</b></div>
+                                <div><small>registros</small><b>133.339</b></div>
+                                <div><small>cargo mais comum</small><b>Data Scientist</b></div>
+                            </div>
+                            <div class="sal_grafico">
+                                <div class="sal_filtros"><span></span><span></span><span></span><span></span></div>
+                                <div class="sal_barras"><i style="--h:30%"></i><i style="--h:48%"></i><i style="--h:66%"></i><i style="--h:92%"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto_corpo">
+                        <div class="projeto_cabeca"><h3>Dashboard de Salários em Dados</h3><span class="categoria">Dashboard</span></div>
+                        <p class="projeto_desc">Dashboard interativo com filtros por ano, senioridade, tipo de contrato e tamanho da empresa para comparar salários de profissionais de dados. Feito na Imersão Dados com Python (Alura).</p>
+                        <ul class="tags"><li>Python</li><li>Pandas</li><li>Plotly</li><li>Streamlit</li></ul>
+                        <div class="links">
+                            <a href="https://imersao-dados-com-python-alura-2026.streamlit.app/" target="_blank" rel="noopener" class="botao">Abrir dashboard ↗</a>
+                            <a href="https://github.com/Alexlimaandre/Imersao-Dados-com-Python-Alura" target="_blank" rel="noopener" class="botao botao_sec">Código</a>
+                        </div>
+                    </div>
+                </article>
 
-        </script>
+                <article class="projeto">
+                    <div class="projeto_visual visual_bebidas">
+                        <span class="status">Concluído</span>
+                        <div class="beb_grafico" aria-hidden="true">
+                            <small>pedidos por cliente</small>
+                            <div class="beb_linha"><span>Estab. A</span><i style="--w:100%"></i></div>
+                            <div class="beb_linha"><span>Estab. B</span><i style="--w:96%"></i></div>
+                            <div class="beb_linha"><span>Estab. C</span><i style="--w:68%"></i></div>
+                            <div class="beb_linha"><span>Estab. D</span><i style="--w:9%"></i></div>
+                        </div>
+                    </div>
+                    <div class="projeto_corpo">
+                        <div class="projeto_cabeca"><h3>Consumo de Bebidas por Estabelecimento</h3><span class="categoria">Análise</span></div>
+                        <p class="projeto_desc">Cruzei duas bases (clientes atendidos e produtos vendidos) para calcular o consumo médio por cliente em cada estabelecimento e os produtos mais vendidos de cada categoria.</p>
+                        <ul class="tags"><li>Python</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li></ul>
+                        <div class="links">
+                            <a href="https://github.com/Alexlimaandre/analise_de_consumo_de_bebidas" target="_blank" rel="noopener" class="botao">Ver no GitHub ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto">
+                    <div class="projeto_visual visual_fluxo">
+                        <span class="status">Concluído</span>
+                        <div class="fluxo" aria-hidden="true">
+                            <span class="fluxo_no">Cliente</span><span class="fluxo_seta">→</span>
+                            <span class="fluxo_no">Cotação</span><span class="fluxo_seta">→</span>
+                            <span class="fluxo_no fluxo_ok">'Aprovada'</span><span class="fluxo_seta">→</span>
+                            <span class="fluxo_no fluxo_auto">Apólice</span>
+                        </div>
+                        <code class="fluxo_legenda" aria-hidden="true">TRIGGER gera a apólice automaticamente</code>
+                    </div>
+                    <div class="projeto_corpo">
+                        <div class="projeto_cabeca"><h3>Sistema para Corretora de Seguros</h3><span class="categoria">SQL · PostgreSQL</span></div>
+                        <p class="projeto_desc">Projeto acadêmico em grupo (Projeto Integrador da FATEC), feito em parceria com uma corretora real. Possui banco modelado em PostgreSQL (clientes, bens, seguradoras, planos, cotações e apólices), uma trigger que gera a apólice quando a cotação é aprovada e 4 mil linhas de dados de teste geradas com Python.</p>
+                        <ul class="tags"><li>PostgreSQL</li><li>Python</li><li>Faker</li><li>Modelagem</li></ul>
+                        <div class="links">
+                            <a href="https://github.com/Alexlimaandre/PI-Corretora-de-Seguros" target="_blank" rel="noopener" class="botao">Ver no GitHub ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto">
+                    <div class="projeto_visual visual_codigo">
+                        <span class="status">Concluído</span>
+<pre aria-hidden="true"><code><b>SELECT</b> c.nome, <b>COUNT</b>(p.id_pedido) <b>AS</b> pedidos
+<b>FROM</b> clients c
+<b>JOIN</b> orders p <b>ON</b> p.id_cliente = c.id
+<b>GROUP BY</b> c.nome
+<b>ORDER BY</b> pedidos <b>DESC</b>;</code></pre>
+                    </div>
+                    <div class="projeto_corpo">
+                        <div class="projeto_cabeca"><h3>Banco de Dados de E-commerce</h3><span class="categoria">SQL</span></div>
+                        <p class="projeto_desc">Modelagem lógica e física de um e-commerce (clientes, pedidos, produtos, pagamentos, entregas e fornecedores) e consultas para responder perguntas sobre o negócio.</p>
+                        <ul class="tags"><li>SQL</li><li>MySQL</li><li>Modelagem</li></ul>
+                        <div class="links">
+                            <a href="https://github.com/Alexlimaandre/E-commerce" target="_blank" rel="noopener" class="botao">Ver no GitHub ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto">
+                    <div class="projeto_visual visual_bi">
+                        <span class="status">Concluído</span>
+                        <div class="bi_kpis" aria-hidden="true"><span></span><span></span><span></span></div>
+                        <div class="bi_colunas" aria-hidden="true"><i style="--h:35%"></i><i style="--h:55%"></i><i style="--h:45%"></i><i style="--h:70%"></i><i style="--h:60%"></i><i style="--h:85%"></i></div>
+                    </div>
+                    <div class="projeto_corpo">
+                        <div class="projeto_cabeca"><h3>Relatório Financeiro no Power BI</h3><span class="categoria">Power BI</span></div>
+                        <p class="projeto_desc">Meu primeiro relatório no Power BI, com a base Financials: vendas, lucro e desempenho por segmento e período.</p>
+                        <ul class="tags"><li>Power BI</li></ul>
+                        <div class="links">
+                            <a href="https://github.com/Alexlimaandre/Relatorio-de-Financials-com-Power-BI" target="_blank" rel="noopener" class="botao">Ver no GitHub ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto">
+                    <div class="projeto_visual visual_excel">
+                        <span class="status">Concluído</span>
+                        <div class="planilha" aria-hidden="true">
+                            <span>Plano</span><span>Assinantes</span><span>Receita</span>
+                            <span>Ultimate</span><span>···</span><span>···</span>
+                            <span>Core</span><span>···</span><span>···</span>
+                            <span>Standard</span><span>···</span><span>···</span>
+                        </div>
+                    </div>
+                    <div class="projeto_corpo">
+                        <div class="projeto_cabeca"><h3>Assinaturas Xbox Game Pass</h3><span class="categoria">Excel</span></div>
+                        <p class="projeto_desc">Desafio de dashboard em Excel: faturamento por tipo de plano, impacto dos cupons de desconto e comparação entre assinaturas com e sem passes adicionais.</p>
+                        <ul class="tags"><li>Excel</li><li>Dashboard</li></ul>
+                        <div class="links">
+                            <a href="https://github.com/Alexlimaandre/Dashboard-de-Vendas" target="_blank" rel="noopener" class="botao">Ver no GitHub ↗</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Desenvolvimento -->
+        <section id="dev" class="secao">
+            <p class="secao_tag">Também desenvolvo</p>
+            <h2 class="secao_titulo">Projetos de desenvolvimento</h2>
+            <div class="dev_grid">
+                <article class="dev_card">
+                    <div class="dev_visual">
+                        <span class="status">Concluído</span>
+                        <img src="images/img-site-mkease.PNG" alt="Tela do app MarketEase" loading="lazy">
+                    </div>
+                    <div><h3>MarketEase</h3><p>TCC da ETEC em equipe: app de listas de compras que lê a nota fiscal pelo QR Code e mostra os gastos do mês em gráficos.</p><ul class="tags"><li>React Native</li><li>PHP</li><li>MySQL</li></ul></div>
+                </article>
+                <article class="dev_card">
+                    <div class="dev_visual visual_terminal" aria-hidden="true">
+                        <span class="status">Concluído</span>
+<pre>--- MENU USUÁRIO ---
+1 - Consultar Produto
+2 - Rastrear Produto
+3 - Logout
+&gt; <span class="cursor">_</span></pre>
+                    </div>
+                    <div><h3>Rastreamento de Produtos</h3><p>Sistema de terminal que registra a posição e o histórico de movimentação de produtos.</p><ul class="tags"><li>Python</li></ul></div>
+                </article>
+                <a class="dev_card" href="https://github.com/Alexlimaandre/App-de-Login" target="_blank" rel="noopener">
+                    <div class="dev_visual visual_login" aria-hidden="true">
+                        <span class="status andamento">Em andamento</span>
+                        <div class="login_caixa"><span></span><span></span><b></b></div>
+                    </div>
+                    <div><h3>App de Login <span class="seta">↗</span></h3><p>Projeto full stack com autenticação.</p><ul class="tags"><li>Angular</li><li>Java Spring</li></ul></div>
+                </a>
+                <a class="dev_card" href="https://github.com/Alexlimaandre/Projeto-Django" target="_blank" rel="noopener">
+                    <div class="dev_visual visual_todo" aria-hidden="true">
+                        <span class="status">Concluído</span>
+                        <ul class="todo"><li class="feito">Estudar Django</li><li class="feito">Criar modelos</li><li>Tema escuro</li></ul>
+                    </div>
+                    <div><h3>To-do List <span class="seta">↗</span></h3><p>Meu primeiro sistema web com Django, com tema claro e escuro.</p><ul class="tags"><li>Python</li><li>Django</li></ul></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="secao contato">
+            <p class="secao_tag">Contato</p>
+            <h2 class="contato_titulo">Vamos conversar?</h2>
+            <p class="contato_sub">Estou buscando estágio em dados. Me chame no LinkedIn.</p>
+            <div class="links links_centro">
+                <a href="https://www.linkedin.com/in/alexandrelimaandre/" target="_blank" rel="noopener" class="botao botao_grande">LinkedIn ↗</a>
+                <a href="https://github.com/Alexlimaandre" target="_blank" rel="noopener" class="botao botao_grande botao_sec">GitHub ↗</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <span>© 2026 Alexandre Lima André</span>
+        <a href="#inicio">Voltar ao topo ↑</a>
+    </footer>
+
+    <script>
+        // Relógio de São Paulo na barra do topo
+        const hora = document.getElementById('hora');
+        function atualizarHora() {
+            hora.textContent = new Intl.DateTimeFormat('pt-BR', {
+                hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo'
+            }).format(new Date());
+        }
+        atualizarHora();
+        setInterval(atualizarHora, 30000);
+
+        // Efeito do Crysta: o nome grande troca pelo nome do card em foco
+        const nomeGrande = document.getElementById('nomeGrande');
+        const nomeOriginal = nomeGrande.textContent;
+        let temporizador;
+        function trocarTexto(texto) {
+            clearTimeout(temporizador);
+            if (nomeGrande.textContent === texto) { nomeGrande.classList.remove('trocando'); return; }
+            nomeGrande.classList.add('trocando');
+            temporizador = setTimeout(() => {
+                nomeGrande.textContent = texto;
+                nomeGrande.classList.remove('trocando');
+            }, 160);
+        }
+        document.querySelectorAll('.bento [data-label]').forEach(card => {
+            card.addEventListener('mouseenter', () => trocarTexto(card.dataset.label));
+            card.addEventListener('focus', () => trocarTexto(card.dataset.label));
+            card.addEventListener('mouseleave', () => trocarTexto(nomeOriginal));
+            card.addEventListener('blur', () => trocarTexto(nomeOriginal));
+        });
+
+        // Seções aparecem suavemente ao rolar
+        const observador = new IntersectionObserver(entradas => {
+            entradas.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visivel'); observador.unobserve(e.target); } });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.secao').forEach(s => observador.observe(s));
+    </script>
 </body>
 </html>

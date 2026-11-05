@@ -419,6 +419,9 @@ a:hover .seta, a:focus-visible .seta { transform: translate(3px, -3px); color: v
     color: var(--texto-3); font-size: 14px;
 }
 .rodape a:hover { color: var(--texto); }
+.rodape_info { display: flex; flex-direction: column; gap: 4px; }
+.rodape_credito { font-size: 11px; color: var(--texto-3); opacity: .7; }
+.rodape_credito a { text-decoration: underline; text-underline-offset: 2px; }
 
 /* ---------- Responsivo ---------- */
 @media (min-width: 900px) {
